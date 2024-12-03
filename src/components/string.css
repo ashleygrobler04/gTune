@@ -1,30 +1,36 @@
-/* Centering the container */
+body {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh; /* Full viewport height */
+  background-color: #f4f4f4; /* Optional: a light background for contrast */
+}
+
 .container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh; /* Full viewport height */
-    flex-direction: column; /* Stack buttons vertically */
-  }
-  
-  /* Button styling for String component */
-  button {
-    width: 80px;           /* Circular width */
-    height: 80px;          /* Circular height */
-    border-radius: 50%;    /* Make it round */
-    background-color: black;
-    color: white;
-    font-size: 16px;       /* Text size */
-    border: none;
-    margin: 10px;          /* Space between buttons */
-    cursor: pointer;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    transition: background-color 0.2s ease; /* Smooth hover transition */
-  }
-  
-  button:hover {
-    background-color: #444; /* Slightly lighter black on hover */
-  }
-  
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center; /* Center horizontally */
+  align-items: center; /* Center vertically */
+  gap: 20px; /* Space between buttons */
+}
+
+button {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%; /* Makes the button circular */
+  background-color: black;
+  color: white;
+  font-size: 14px;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center; /* Centers text in the button */
+  transition: background-color 0.2s ease;
+}
+
+button:hover {
+  background-color: #444; /* Dark gray on hover */
+}

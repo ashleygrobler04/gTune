@@ -1,19 +1,17 @@
-import React from "react";
-import String from "./components/string";
-import { stringFrequencies } from "./audio";
-import "./string.css";
+import React from 'react';
+import { playNote } from '../audio';
+import './string.css';  // Import the corresponding CSS file for styling
 
-function App() {
+const String = (props) => {
+  const handleClick = () => {
+    playNote(props.freq); // Play the note when the button is clicked
+  };
+
   return (
-    <div className="container">
-      <String name="String 1" freq={stringFrequencies.e4} />
-      <String name="String 2" freq={stringFrequencies.B3} />
-      <String name="String 3" freq={stringFrequencies.G3} />
-      <String name="String 4" freq={stringFrequencies.D3} />
-      <String name="String 5" freq={stringFrequencies.A2} />
-      <String name="String 6" freq={stringFrequencies.E2} />
-    </div>
+    <button className="string-button" onClick={handleClick}>
+      {props.name}
+    </button>
   );
-}
+};
 
-export default App;
+export default String;
