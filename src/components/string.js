@@ -1,12 +1,9 @@
-import AudioWrapper from "../aud";
-const aw = new AudioWrapper();
+import {playNote} from "../audio";
 
 const String = (props) => {
   const handleClick = () => {
-    aw.loadSound(`strings/${props.stringName}.mp3`).then(() =>
-      aw.playSound(`strings/${props.stringName}.mp3`)
-    );
-    console.log(`props:${props}`);
+    //console.log("Hi there");
+    playNote(props.freq);
   };
   return <button onClick={handleClick}>{props.name}</button>;
 };
