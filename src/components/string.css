@@ -1,0 +1,30 @@
+/* Centering the container */
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* Full viewport height */
+    flex-direction: column; /* Stack buttons vertically */
+  }
+  
+  /* Button styling for String component */
+  button {
+    width: 80px;           /* Circular width */
+    height: 80px;          /* Circular height */
+    border-radius: 50%;    /* Make it round */
+    background-color: black;
+    color: white;
+    font-size: 16px;       /* Text size */
+    border: none;
+    margin: 10px;          /* Space between buttons */
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: background-color 0.2s ease; /* Smooth hover transition */
+  }
+  
+  button:hover {
+    background-color: #444; /* Slightly lighter black on hover */
+  }
+  
