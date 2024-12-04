@@ -8,7 +8,7 @@ function StaticSlider(props) {
     };
 
     return (
-        <div>
+        <div style={{borderStyle: "solid", backgroundColor: "black", color: "white", display: "block"}}>
             <input 
                 type="range" 
                 min="1" 
@@ -22,5 +22,6 @@ function StaticSlider(props) {
         </div>
     );
 }
+
 
 export default StaticSlider;
