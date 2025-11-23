@@ -1,0 +1,80 @@
+﻿@page "/"
+@inject IJSRuntime JS
+
+<PageTitle>Home</PageTitle>
+<h1>gTune</h1>
+
+<div>
+    <label>
+        Volume: @Volume
+        <input type="range" min="0" max="10" step="1" @bind="Volume" @bind:event="oninput" />
+    </label>
+</div>
+
+@if (_stringModels.Count == 0)
+{
+    <p>Setting up strings...</p>
+}
+else
+{
+    @foreach (var sm in _stringModels)
+    {
+        <StringComponent Name="@sm.Name" Freq="@sm.Freq" />
+    }
+}
+
+
+@code {
+    public class StringModel
+    {
+        public string Name { get; set; } = string.Empty;
+        public double Freq { get; set; }
+    }
+
+    private List<StringModel> _stringModels { get; set; } = new List<StringModel>();
+
+    private int _volume = 5;
+    private int Volume
+    {
+        get => _volume;
+        set
+        {
+            _volume = value;
+            // Call into JS whenever the slider moves
+            JS.InvokeVoidAsync("SetVolume", _volume);
+        }
+    }
+
+
+    protected override async Task OnInitializedAsync()
+    {
+        _stringModels = new List<StringModel>() {
+new StringModel {
+Name="String 6",
+Freq=329.63
+},
+new StringModel {
+Name="String 5",
+Freq=246.94
+},
+new StringModel{
+Name="String 4",
+Freq=196.0
+},
+new StringModel {
+Name="String 3",
+Freq=146.83
+},
+new StringModel() {
+Name="String 2",
+Freq=110.00
+},
+new StringModel {
+Name="String 1",
+Freq=82.41
+}
+};
+        await JS.InvokeVoidAsync("SetVolume", _volume);
+        StateHasChanged();
+    }
+}

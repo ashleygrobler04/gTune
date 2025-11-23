@@ -1,0 +1,20 @@
+﻿@inject IJSRuntime JS
+
+<button @onclick="OnButtonClick">@Name</button>
+
+@code {
+    [Parameter]
+    public string Name { get; set; } = string.Empty;
+    [Parameter]
+    public double Freq { get; set; }
+
+    public async Task PlayNoteAsync()
+    {
+        await JS.InvokeVoidAsync("playNote", Freq);
+    }
+
+    public async Task OnButtonClick(MouseEventArgs e)
+    {
+        await PlayNoteAsync();
+    }
+}
