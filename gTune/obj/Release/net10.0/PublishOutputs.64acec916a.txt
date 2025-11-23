@@ -1,0 +1,4 @@
+C:\dev\gTune\gTune\bin\Release\net10.0\publish\wwwroot\index.html
+C:\dev\gTune\gTune\bin\Release\net10.0\publish\gTune.runtimeconfig.json
+C:\dev\gTune\gTune\bin\Release\net10.0\publish\dotnet.js
+C:\dev\gTune\gTune\bin\Release\net10.0\publish\web.config
