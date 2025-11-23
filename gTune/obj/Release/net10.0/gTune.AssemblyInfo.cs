@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("gTune")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Release")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+0166b99922d6b62555f2d323e8f5996d795dd146")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+c7de8bb00c6fe6c9e08029b6d8174abaee76d98b")]
 [assembly: System.Reflection.AssemblyProductAttribute("gTune")]
 [assembly: System.Reflection.AssemblyTitleAttribute("gTune")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
